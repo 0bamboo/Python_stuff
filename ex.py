@@ -6,7 +6,7 @@ name = 'abdennacer'
 last = 'ama'
 # STRING CONCATENATION
 message = name + ' [' + last + '] is a programmer'
-# ===>> FORMATED STRA
+# ===>> FORMATED STR
 msg = f'{name} [{last}] is a programmer '
 print('--------------- concatenation strs --------------')
 print (message)
@@ -37,7 +37,7 @@ print('ama' in rep)
 print('paayk_'in rep)
 
 #  ============ ARITHMETIC OPERATIONS ===========
-print('--------------- arithmetix operators --------------')
+print('--------------- arithmetics operators --------------')
 # float div 
 print(10 / 3)
 # int div
@@ -83,7 +83,7 @@ price = 1000000
 good_cr = True
 if good_cr:
     price = (1000000 * 10) / 100
-    print('the price of the house now is = ' + str(price) + '$')
+    print(f'the price of the house now is = {price} $')
 else:
     price = (1000000 * 20) / 100
     print('the price of the house now is = ' + str(price) + '$')
@@ -124,7 +124,7 @@ print('-----------------ex------------')
 #     print(f'you have an amazing name {inp} ' * len(inp))
 
 # =================PROJECT : WEIGHT CONVERTER==============
-
+print('----------------weight converter----------')
 # w = int (input('Enter your weight : '))
 # unit = input('kilos [ K ] or pounds [ P ] : ')
 # if unit == 'k' or unit == 'K':
@@ -192,11 +192,95 @@ print('-------------------------GAME CAR -------------------')
 # str = input('enter your passward : ')
 # for i in str:
 #     print(i)
-
+#  range function ex :for item in range(3) 
+#                           print (item)   = 0 
+#                                            1 
+#                                            2 
 # ===========ex======
 # augmented assignement operator += , //= , -=, *= ...
+print('------------ex calcul total using for loop---------')
 total = 0
 prices =[199, 304, 39, 34, 99]
 for item in prices:
     total += item
 print(f'total : |{total}|')
+
+# ======================= NESTED LOOPS==================
+print('----------ex coordinates--------')
+
+for x in range(3):
+    for y in range(3):
+        print(f'({x}, {y})')
+print('-----------CHALLENGE---------')
+
+challenge = [2, 2, 2, 2, 7]
+# using cheat method hahahah
+# for item in challenge:
+#     print('x' * item)
+# using dumb method hahahah
+# for i in challenge:
+#     if i == 5:
+#         print('xxxxx')
+#     else:
+#         print('xx')
+# using nested loops
+for i in challenge:
+    out = ''
+    for r in range(i):
+        out += 'x'
+    print(out)
+# =========================== LISTS =============================
+names = ['abdenncer', 'paayk', 'mugiwara', 'kumaa']
+print(names)
+print(names[:])
+print(names[-2])
+print(names[2:])
+print(names[3:3])
+print(names[1:-4])
+names[-1] = 'kuma'
+print(names[3])
+# ===== find the largest number in the list =====
+print('------find the largest numbed in the list-----')
+find_largest = [43, 66643, 5, 4385, -33, 209, 23, 849, 32, 9889999, 23878723]
+largest_nbr = 0
+for i in find_largest:
+    if i > largest_nbr:
+        largest_nbr = i
+print(f'largest number is : {largest_nbr}')
+# =========================== 2D LISTS =================
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+for i in matrix:
+    for j in i:
+        print(j)
+# =========== list methods ===============
+numbers = [3, 5, 6, 7, 4, 3, 9]
+numbers.append(13) #to add an item at the end of the list
+numbers.insert(3, 10) #to add an item in list wherever you want (index, item_to_be_added)
+numbers.clear() # to delete the list
+# numbers.remove(9) # to remove an item on the list
+for i in range(7, 26):
+    numbers.append(i ** i % 3)
+print(numbers) 
+print(numbers.pop()) #to remove the last item on the list
+print(numbers)
+ind = numbers.index(2) # to check for an item on the list it returns the index of first occurance of the item
+print(ind)
+numbers.count(1) # to count the items of the list 
+numbers.sort() # to sort the items 1234
+numbers.reverse() # to reverse the list 
+numbers.copy() # to get the copy of the list
+# ============  ex to remove duplicates on the list ===========
+print('-------------------- remove dups ---------------')
+lis = [2, 3, 4, 5, 6, 4, 3, 2, 2, 2, 4]
+another_lis = []
+for item in lis:
+    if item not in another_lis:
+        another_lis.append(item)   # dont think to much ;)
+print(another_lis)
+
+# ======================= TUPLES==================
