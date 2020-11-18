@@ -112,3 +112,91 @@ elif temperature == 10:
     print('let is go to sky')
 else:
     print('stay home and play video games :D ')
+
+print('-----------------ex------------')
+
+# inp = input('inter your name : ')
+# if len(inp) < 3:
+#     print('the name must be at least 3 characters')
+# elif len(inp) >= 20:
+#     print('your name is too long its impossible to have a name like that are you stupid , aw i mean your father or mother whatever')
+# else:
+#     print(f'you have an amazing name {inp} ' * len(inp))
+
+# =================PROJECT : WEIGHT CONVERTER==============
+
+# w = int (input('Enter your weight : '))
+# unit = input('kilos [ K ] or pounds [ P ] : ')
+# if unit == 'k' or unit == 'K':
+#     w = w * 2.21
+#     print(f'your weight in Kg is : {w} p')
+# elif unit == 'p' or unit == 'P':
+#     w //= 2.21
+#     print(f'your weight in pounds is : {w} kg')
+# else:
+#     print('the data is not correct !')
+
+# ==========================WHILE LOOP=====================
+i = 1
+# while i <= 10:
+#     print(f'[ {i} ]')
+#     i += 1
+# print('the loop is done')
+
+while i <= 10:
+    print('*' * i)
+    i += 1
+print('DONE')
+
+# ================GUESS GAME =============
+print('----------------------GUESS GAME-------------')
+# i = 0
+# while i < 3:
+#     guess = int (input('Guess the number : '))
+#     if guess == 1 or guess == 0:
+#         print('You win !')
+#         i = 3  # break 
+#     i += 1
+# if i == 3: #you can use else for while if the loop finished without break the code in this else block will be executed
+#     print('You have only 3 trys good luck next time !')
+# ===============GAME CAR===================
+print('-------------------------GAME CAR -------------------')
+# i = j = 0
+# while 1:
+#     the_given_str = input('>')
+#     if the_given_str == "help":
+#         print('''
+#     start ---> to start the car
+#     stop  ---> to stop the car 
+#     quit  ---> to quit the game
+#         ''')
+#     elif the_given_str.lower() == "start":
+#         if i == 0:
+#             print('car started .... ready to go !')
+#             i = 1
+#         else:
+#             print('Hey car already started .')
+#     elif the_given_str.lower() == "stop":
+#         if j == 0:
+#             print('Hey car stoped .')
+#             j = 1
+#         else:
+#             print('car already stoped .')
+#     elif the_given_str.lower() == "quit":
+#         print('game over')
+#         break
+#     else:
+#         print('i do not understand . please check help command ')
+# ========================= FOR LOOP===========================
+
+# str = input('enter your passward : ')
+# for i in str:
+#     print(i)
+
+# ===========ex======
+# augmented assignement operator += , //= , -=, *= ...
+total = 0
+prices =[199, 304, 39, 34, 99]
+for item in prices:
+    total += item
+print(f'total : |{total}|')
