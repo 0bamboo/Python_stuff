@@ -320,23 +320,34 @@ print(person.get("school"))
 # print(ret_val)
 
 # =================== Another exercice(emojis) =================
-
-# emojis = {
-#     ':)':'😊',
-#     ':(':'☹',
-#     'sleepy':'😴',
-#     'upset':'😠',
-#     'sick' :'🤒😷🤧🥶'
-# }
-# emo_lis = input('> ')
-# lis = emo_lis.split(' ') 
-# for i in lis:
-#     emo_lis += emojis.get(i, i) + ' '
-# print(emo_lis)
+emo_lis = input('> ')
+def ft_convert_to_emojis(lis, emo_lis):
+    lis = emo_lis.split(' ') 
+    emojis = {
+        ':)':'😊',
+        ':(':'☹',
+        'sleepy':'😴',
+        'upset':'😠',
+        'sick' :'🤒😷🤧🥶'
+    }
+    emo_lis = ""
+    for i in lis:
+        emo_lis += emojis.get(i, i) + ' '
+    return (emo_lis)
+lis = ""
+pr = ft_convert_to_emojis(lis, emo_lis)
+print(pr)
 # ========================= FUNCTION ====================
 print('=============== FUNCTIONS ==============')
-def ft_first_func(my_name):
-    print(f'Hello {my_name} from the first function')
+def ft_first_func(my_name, my_lastn):
+    print(f'Hello {my_name} {my_lastn} from the first function')
+total = 0.0
+def calc_cost(items, shipping, discount ):
+    return ((items * discount) + shipping)
 
 print('first func will be executed : ')
-ft_first_func("abdennacer")
+ft_first_func("abdennacer", "ama")                          #===>>positional arguments     | positional args used before keyword args
+ft_first_func(my_lastn = "ama", my_name = "abdennacer")     #===>>keyword arguments        |
+
+total = calc_cost(items = 342, shipping = 43, discount = 0.5)
+print(total)
