@@ -284,3 +284,59 @@ for item in lis:
 print(another_lis)
 
 # ======================= TUPLES==================
+numbers = (1, 2, 5) #====> tuple you can not change its items unchangeable
+# ====================== UNPACKING===============
+num = (2, 3, 5)
+x = num[0]
+y = num[1]
+z = num[2]
+ # || this equal to :
+x, y, z = num
+# =============== DICTIONARIES =================
+person = {
+    "name": "abdenncer ama",
+    "age": 22,
+    "school": "1337 school"
+}
+print(person["name"])
+print(person.get("school"))
+# =================== exercie =============
+# phone_nbr = input('phone number : ')
+# numb = {
+#     "1": ' one ',
+#     "2": ' two ',
+#     "3": ' three ',
+#     "4": ' four ',
+#     "5": ' five ',
+#     "6": ' six ',
+#     "7": ' seven ',
+#     "8": ' eight ',
+#     "9": ' nine ',
+#     "0": ' zero '
+# }
+# ret_val = ""
+# for i in phone_nbr:
+#     ret_val += " " + numb.get(i, "error!")    
+# print(ret_val)
+
+# =================== Another exercice(emojis) =================
+
+# emojis = {
+#     ':)':'😊',
+#     ':(':'☹',
+#     'sleepy':'😴',
+#     'upset':'😠',
+#     'sick' :'🤒😷🤧🥶'
+# }
+# emo_lis = input('> ')
+# lis = emo_lis.split(' ') 
+# for i in lis:
+#     emo_lis += emojis.get(i, i) + ' '
+# print(emo_lis)
+# ========================= FUNCTION ====================
+print('=============== FUNCTIONS ==============')
+def ft_first_func(my_name):
+    print(f'Hello {my_name} from the first function')
+
+print('first func will be executed : ')
+ft_first_func("abdennacer")
