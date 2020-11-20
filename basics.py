@@ -351,3 +351,83 @@ ft_first_func(my_lastn = "ama", my_name = "abdennacer")     #===>>keyword argume
 
 total = calc_cost(items = 342, shipping = 43, discount = 0.5)
 print(total)
+
+# =================================== Handling errors (exceptions)======================
+print('--------------------- exceptions (errors handling)--------------')
+try:
+    age = int(input('what is your edge : '))
+    print(age)
+    money = 2000 / age
+except ZeroDivisionError:
+    print('age cannot be zero')
+except ValueError: #instead of crashing the program we will print an error msg
+    print ('Invalid error')
+
+# ====================== CLASSES ======================================
+
+print ('------------------ CLASSES -------------')
+
+# defining a class 
+
+class Point:
+    def __init__(self, x, y): # the constructor fucntion 
+        self.x = x
+        self.y = y
+
+    def move(self):
+        print('the player start moving')
+
+    def draw(self):
+        print('the player start drawing ')
+# create an object 
+pointt = Point(10, 20)
+pointt.draw()
+# an object plus an attribute
+# pointt.x = 34
+print(pointt.x)
+
+class Person:
+    def __init__(self, name): 
+        self.name = name
+
+    def talk(self):
+        print (f'talk amigo {self.name}')
+
+namee = Person("abdennacer")
+namee.talk()
+
+# ===================== INHERITANCE ==============
+class Som:
+    def walk(self):
+        print('start walking')
+
+class Dog(Som):
+    pass            #pass means nothing defined 
+
+class Cat(Som):
+    def __init__(self, name):
+        self.name = name
+    def jump(self):
+        print(f'jump little {self.name} jump !!')
+
+doggy = Dog()
+cattie = Cat("lucy")
+doggy.walk()
+cattie.jump()
+
+
+# ========================= MODULES ====================
+
+import converters  # we import our module , we import everything in the module 
+from converters import kg_to_pounds #we import only the funct kg_to_pounds
+
+print (kg_to_pounds(77))
+print (converters.kg_to_pounds(45))
+print (converters.pounds_to_kg(145))
+
+print('----------------------- exercice--------------')
+
+from utils import find_max
+
+tab = [45, 949, 00, 4, 3343, 33, 283, 3232, 9594, 403, 979, 333]
+print(find_max(tab))
