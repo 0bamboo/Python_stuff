@@ -50,7 +50,7 @@ print(19 % 7)
 # ========== OPERATOR PRECEDENCE ===============
 print('--------------- operator precedence --------------')
 x = 10 + 4 * 3 ** 2
-print ('prethesis then exp first then mult then div .... '+ str(x))
+print ('prenthesis then exp first then mult then div .... '+ str(x))
 
 #  ============= MATH FUNCTIONS ===================
 print('---------------Math funcs--------------')
@@ -431,3 +431,42 @@ from utils import find_max
 
 tab = [45, 949, 00, 4, 3343, 33, 283, 3232, 9594, 403, 979, 333]
 print(find_max(tab))
+
+#PACKAGES fiels inside folders import those files like this :
+# import folder.file or from folder import file
+
+# ===========built in modules like math random ....
+import random
+
+print (random.random())
+# choose the best player in history
+
+players = ['messi', 'ronaldo', 'maradona', 'pele', 'cr7', 'kreuf']
+best = random.choice(players)
+print(best)
+
+# ==============exercice==================
+print('-----------ex roll a dice ------------')
+class Dice:
+    def roll(self):
+        first = random.randint(1, 6)
+        second = random.randint(1, 6)
+        return (first, second)
+
+dice = Dice()
+print(dice.roll())
+
+# ======================= How To Work With Files And Directories =======================
+from pathlib import Path
+
+
+# absolute path "startion from the root "
+# relative path "starting from the current directory"
+
+py_path = Path("path_check")
+r = py_path.exists()   #checks if the existence of the folder in current folder
+print (r)
+
+p_path = Path()
+for file in p_path.glob('*.py'):   # method for searching for files or (directories) with ext py in the current folder
+    print(file)
