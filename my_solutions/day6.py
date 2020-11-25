@@ -24,5 +24,14 @@ print(','.join(pr_pass))
 # seriously C way again !!
 # ==================== Q19 =========================
 print('------------- Q19 -------------------')
-tup = input('> ').split(' ')
-print(tup)
+lst = list()
+while 1:
+    tup = input(' ').split(',')
+    if not tup[0]:
+        break
+    lst.append(tuple(tup))
+
+lst.sort()
+print(*lst, sep=", ")
+
+# =================  DONE ======================
