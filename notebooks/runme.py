@@ -1,0 +1,1 @@
+print('this some python exercices and their solutions :D :)\n'* 1000)
