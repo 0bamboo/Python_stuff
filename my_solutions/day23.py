@@ -28,27 +28,26 @@ for i, d in enumerate(lis[0]):
     ret_str += d
 ret_lis.append(ret_str)
 ret_str = ''
-j = index - 1
-count = 2
-for ind,item in enumerate(lis):
-    if ind == 0:
-        continue
-    ret_str += '-' * count
-    for x in range(index + 1, num_hphn):
-        if x % 2 == 0:
-            ret_str += alpha[j]
-            j += sign
-            if j == n - (n - 1):
-                sign -= 1
-                j += 2
-            continue
-        ret_str += item[x]
-        print(item[x])
-    ret_str += '-' * count
-    ret_lis.append(ret_str)
+anoth = ''
+mult__ = 2
+cnt = 0
+while cnt < n - 1:
+    var = len(ret_lis[0]) // 2 + 2
+    ret_str = ret_lis[cnt][var:]
+    anoth = ret_str
+    ret_str = '-' * mult__ + ret_str[::-1]
+    ret_str += anoth[1:] 
+    ret_str += '-' * mult__
     print(ret_str)
-    ret_str = ''
-    count += 2
+    ret_lis.append(ret_str)
+    cnt += 1
+    mult__ += 2
+# ret_str += ret_lis[0][var:]
+# anoth += ret_lis[0][var:]
+# ret_str = ret_str[::-1]
+# ret_str += anoth[1:]
+# print(ret_str)
+
 print(alpha[index])
 print(ret_lis)
 print(lis)
